@@ -1,23 +1,4 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
-
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-
-/**
- * @title NFTify Hub
- * @dev A comprehensive NFT marketplace smart contract with minting, listing, and trading capabilities
- */
-contract Project is ERC721URIStorage, Ownable, ReentrancyGuard {
-    using Counters for Counters.Counter;
-    Counters.Counter private _tokenIds;
-    Counters.Counter private _itemsSold;
-
-    uint256 public listingFee = 0.001 ether;
-    uint256 public royaltyPercentage = 5; // 5% royalty for creators
+5% royalty for creators
 
     struct NFTListing {
         uint256 tokenId;
@@ -244,3 +225,6 @@ contract Project is ERC721URIStorage, Ownable, ReentrancyGuard {
         return _ownerOf(tokenId) != address(0);
     }
 }
+// 
+Contract End
+// 
